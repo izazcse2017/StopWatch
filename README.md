@@ -68,3 +68,49 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+to create this project install use-timer ( npm install use-timer),
+ npm install iuse timer 
+### use-timer hook
+The use-timer package provides a custom React hook that helps in managing timers within a React component. This hook simplifies the process of creating, starting, pausing, and resetting timers, which can be useful for various purposes like countdowns, stopwatches, or any other time-based functionality in a React application.
+
+The useTimer hook provides an easy way to manage the timer's state, including the current time (time), the timer's status (status), and functions to control the timer (start, pause, reset).
+Simplifying Timer Logic: It abstracts away the complexity of handling timer logic, such as updating the time at regular intervals and managing the timer's lifecycle.
+
+The returned values from the useTimer hook (time, start, pause, reset, status) are used to display the timer's current value, control the timer, and show the timer's status in the UI.
+
+### state variales of use-timer hook
+Variables Returned by useTimer
+time
+start
+pause
+reset
+status
+
+
+-->time
+
+Function: This variable holds the current value of the timer.
+How it works: The useTimer hook internally manages the time state and updates this variable at regular intervals when the timer is running. When the timer is paused or reset, this value is accordingly adjusted.
+
+-->start
+
+Function: This is a function that starts or resumes the timer.
+How it works: When you call start, the useTimer hook begins or continues to increment the time variable at a regular interval (usually every second). If the timer was paused, calling start will resume it from the current time.
+
+-->pause
+
+Function: This is a function that pauses the timer.
+How it works: When you call pause, the useTimer hook stops incrementing the time variable, effectively freezing the timer at its current value. The timer can later be resumed by calling start.
+
+-->reset
+
+Function: This is a function that resets the timer to its initial state.
+How it works: When you call reset, the useTimer hook sets the time variable back to its initial value (typically zero) and stops the timer if it was running. You can then start the timer again by calling start.
+
+-->status
+
+Function: This variable holds the current status of the timer.
+Possible values: "RUNNING", "PAUSED", "STOPPED"
+How it works: The useTimer hook updates this variable based on the actions performed. When start is called, the status is set to "RUNNING". When pause is called, the status is set to "PAUSED". After reset or if the timer hasn't been started yet, the status is "STOPPED".
